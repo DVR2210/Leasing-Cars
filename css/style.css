@@ -476,6 +476,10 @@ grid-template-columns: repeat(4, 1fr);
 gap: 100px 40px;
 }
 
+.tabs__btn-item.tabs__content-itme--active{
+    display: grid;
+}
+
 .card{
     text-align: center;
 }

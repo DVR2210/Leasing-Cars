@@ -7,12 +7,19 @@ tabItem.forEach(function(el){
 
 function open(evt) {
   const tabTarget = evt.currentTarget;
+  const button = tabTarget.dataset.button;
 
   tabItem.forEach(function(item) {
     item.classList.remove('tabs__btn-item--active')
   });
 
   tabTarget.classList.add('tabs__btn-item--active');
+
+  tabContent.forEach(function(itme){
+    itme.classList.remove('tabs__content-itme--active')
+  })
+
+  document.querySelector(`#${button}`).classList.add('tabs__content-itme--active');
 
 };
 
